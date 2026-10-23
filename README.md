@@ -177,4 +177,4 @@ good-world/
 
 ## License
 
-MIT
+MIT © 2026 LynnGuo666
