@@ -36,7 +36,28 @@
 
 ## 安装
 
-### OpenCode
+### npx skills（推荐）
+
+```bash
+# 1. 先看仓库里有哪些 skill
+npx skills add LynnGuo666/good-world --list
+
+# 2. 安装到当前项目（自动检测 agent）
+npx skills add LynnGuo666/good-world
+
+# 3. 非交互安装到 OpenCode
+npx skills add LynnGuo666/good-world -a opencode -y
+
+# 4. 全局安装
+npx skills add LynnGuo666/good-world -g
+```
+
+安装后可用 `npx skills list` 查看；更新用 `npx skills update good-world`。
+
+> `npx skills` 会把 skill 复制/链接到 agent 目录，例如 `.agents/skills/good-world`。
+> 文件包含 `SKILL.md`、`references/`、`templates/`、`scripts/`。
+
+### OpenCode 手动安装
 
 全局安装：
 
