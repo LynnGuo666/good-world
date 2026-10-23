@@ -1,0 +1,25 @@
+{
+  "slug": "{{SLUG}}",
+  "name": "{{WORLD_NAME}}",
+  "mode": "spark",
+  "platform": "douyin-vcreate",
+  "phase": "capture",
+  "iteration": 0,
+  "one_liner": "",
+  "gates": {
+    "G0": { "status": "pending", "evidence": "" },
+    "G1": { "status": "pending", "evidence": "" },
+    "G2": { "status": "pending", "evidence": "" },
+    "G3": { "status": "pending", "evidence": "" },
+    "G4": { "status": "pending", "evidence": "" },
+    "G5": { "status": "pending", "evidence": "" },
+    "G6": { "status": "pending", "evidence": "" },
+    "G7": { "status": "pending", "evidence": "" },
+    "G8": { "status": "pending", "evidence": "" },
+    "G9": { "status": "pending", "evidence": "" }
+  },
+  "open_questions": [],
+  "assumptions": [],
+  "next_action": "",
+  "updated": "{{DATE}}"
+}
