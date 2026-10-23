@@ -24,4 +24,4 @@ jobs:
         run: |
           tmp="$(mktemp -d)"
           node scripts/new-world.mjs "CI Test World" --root "$tmp"
-          node scripts/check-world.mjs "$tmp/CI Test World"
+          node scripts/check-world.mjs "$tmp/CI-Test-World"
