@@ -177,4 +177,6 @@ good-world/
 
 ## License
 
-MIT © 2026 LynnGuo666
+Apache License 2.0. See [LICENSE](LICENSE).
+
+Copyright 2026 LynnGuo666.
