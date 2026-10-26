@@ -1,6 +1,7 @@
 # {{WORLD_NAME}}｜红队评审
 
 > 日期：{{DATE}}　评审人：{{REVIEWER}}　轮次：1
+> 这份别直接给用户看：先按 `references/review.md` 第 7.5 节，把它翻译成人话再说。
 
 ## 结论
 

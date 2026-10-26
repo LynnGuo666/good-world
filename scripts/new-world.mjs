@@ -117,4 +117,4 @@ for (const [src, dest] of FILES) {
 
 console.log(`已创建: ${target}`);
 console.log(FILES.map(([, d]) => `  ${d}`).join("\n"));
-console.log(`\n下一步: 从 00-brief.md 开始，先填 G0/G1，再进入 S2 调研。`);
+console.log(`\n下一步: 从 00-brief.md 开始，把「谁会来」问清楚（G1），再给三个方向草稿，然后去调研。`);

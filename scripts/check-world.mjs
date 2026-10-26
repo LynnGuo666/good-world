@@ -20,6 +20,7 @@ const REQUIRED = {
 
 const PHASE_ORDER = ["capture", "interview", "research", "concept", "design", "review", "build", "playtest", "package"];
 const GATE_KEYS = Array.from({ length: 10 }, (_, i) => `G${i}`);
+const HARD_GATES = ["G1", "G3", "G4", "G7"];
 
 const dir = process.argv[2];
 if (!dir) {
@@ -70,7 +71,8 @@ if (!(await exists(statePath))) {
     }
     const idx = PHASE_ORDER.indexOf(state.phase);
     const passed = GATE_KEYS.filter((g) => state.gates?.[g]?.status === "pass").length;
-    oks.push(`phase=${state.phase} (${idx + 1}/${PHASE_ORDER.length})，已过门禁 ${passed}/10`);
+    const hardPassed = HARD_GATES.filter((g) => state.gates?.[g]?.status === "pass").length;
+    oks.push(`phase=${state.phase} (${idx + 1}/${PHASE_ORDER.length})，门禁 ${passed}/10（硬 ${hardPassed}/${HARD_GATES.length}）`);
   }
 }
 
@@ -158,10 +160,11 @@ for (const e of errors) console.log(`  ✗ ${e}`);
 
 const structural = errors.length === 0;
 const passed = state?.gates ? GATE_KEYS.filter((g) => state.gates[g]?.status === "pass").length : 0;
+const hardPassed = state?.gates ? HARD_GATES.filter((g) => state.gates[g]?.status === "pass").length : 0;
 
 console.log(
   `\n${structural ? "结构完整。" : `结构未通过：${errors.length} 个阻塞问题。`}` +
-  `门禁 ${passed}/10 通过。` +
+  `门禁 ${passed}/10 通过，其中硬门禁 ${hardPassed}/${HARD_GATES.length}。` +
   `${structural && passed === 0 ? "仍在 S1，填完内容后更新 state.json 再推进。" : ""}\n`
 );
 process.exit(structural ? 0 : 1);
