@@ -4,7 +4,7 @@
 
 这是一个**公开版**技能包，可直接装进 OpenCode、Claude Code、Codex 等支持 Agent Skills 的工具里使用。
 
-当前版本：**v0.2.0**　·　改动记录见 [CHANGELOG.md](CHANGELOG.md)
+当前版本：**v0.3.0**　·　改动记录见 [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
